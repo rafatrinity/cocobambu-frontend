@@ -1,7 +1,7 @@
 export class Receita {
     nome: string = '';
     desc: string = '';
-    Ingredientes: Array<string> = [];
+    ingredientes: Array<string> = [];
     preparo: Preparo = new Preparo();
     image: Image = new Image;
 }
