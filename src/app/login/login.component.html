@@ -4,12 +4,12 @@
     <div class="card-body">
       <form [formGroup]="formCredentials">
         <mat-form-field appearance="fill">
-          <mat-label>usuario</mat-label>
+          <mat-label>Usuario</mat-label>
           <input matInput formControlName="user" name="user">
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>usuario</mat-label>
-          <input matInput formControlName="pass" name="pass">
+          <mat-label>Senha</mat-label>
+          <input matInput formControlName="pass" name="pass" type="password">
         </mat-form-field>
         <button mat-raised-button color="warn" (click)="validateLogin()">Warn</button>
       </form>

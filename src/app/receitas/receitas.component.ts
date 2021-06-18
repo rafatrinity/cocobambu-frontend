@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Receita } from './receita.model';
+import { ReceitasService } from './receitas.service';
 
 @Component({
   selector: 'app-receitas',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./receitas.component.scss']
 })
 export class ReceitasComponent implements OnInit {
-
-  constructor() { }
+  receitas: Receita[] = [];
+  constructor(private RS: ReceitasService) { }
 
   ngOnInit(): void {
+    this.obterReceitas();
+  }
+
+  obterReceitas(){
+    this.RS.getAll().subscribe((receitas: Receita[])=>{
+      this.receitas=receitas;
+      console.log(receitas);
+      
+    });
   }
 
 }

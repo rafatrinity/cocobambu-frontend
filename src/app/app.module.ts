@@ -11,7 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PreparoComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
@@ -29,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    MatCardModule,
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent],
