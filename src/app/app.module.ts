@@ -6,19 +6,31 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ReceitasComponent } from './receitas/receitas.component';
 import { PreparoComponent } from './preparo/preparo.component';
+import { AuthGuardService } from './guards/auth-guard.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ReceitasComponent,
-    PreparoComponent
+    PreparoComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatFormFieldModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthGuardService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

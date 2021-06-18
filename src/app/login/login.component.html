@@ -1,1 +1,18 @@
-<img src="../../assets/img-bg-login.jpg">
+<img src="../../assets/img-bg-login.jpg" />
+<div class="pkg row">
+  <div class="card col3">
+    <div class="card-body">
+      <form [formGroup]="formCredentials">
+        <mat-form-field appearance="fill">
+          <mat-label>usuario</mat-label>
+          <input matInput formControlName="user" name="user">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>usuario</mat-label>
+          <input matInput formControlName="pass" name="pass">
+        </mat-form-field>
+        <button mat-raised-button color="warn" (click)="validateLogin()">Warn</button>
+      </form>
+    </div>
+  </div>
+</div>
