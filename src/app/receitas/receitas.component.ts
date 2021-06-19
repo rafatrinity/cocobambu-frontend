@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { SharedService } from '../shared/shared.service';
 import { Receita } from './receita.model';
 import { ReceitasService } from './receitas.service';
 
@@ -15,8 +16,8 @@ export class ReceitasComponent implements OnInit {
   receitas: Receita[] = [];
   receitaCtrl = new FormControl();
   filteredReceitas: Observable<Receita[]>;
-
-  constructor(private RS: ReceitasService, private router: Router) {
+  
+  constructor(private RS: ReceitasService, private router: Router, private SS: SharedService) {
     this.filteredReceitas = this.receitaCtrl.valueChanges.pipe(
       startWith(''),
       map((receita) =>
@@ -40,6 +41,10 @@ export class ReceitasComponent implements OnInit {
     this.router.navigate(['login']);
   }
 
+  open(receita :Receita){
+     this.SS.setReceita(receita);
+     this.router.navigate(['preparo']);
+  }
   private _filterReceitas(value: string): Receita[] {
     const filterValue = value.toLowerCase();
     return this.receitas.filter((receita) =>

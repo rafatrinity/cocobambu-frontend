@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Receita } from '../receitas/receita.model';
+import { SharedService } from '../shared/shared.service';
 
 @Component({
   selector: 'app-preparo',
@@ -7,10 +9,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./preparo.component.scss'],
 })
 export class PreparoComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) {}
-
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private SS: SharedService
+  ) {}
+  receita: Receita = new Receita();
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(id);
+    this.receita = this.SS.getReceita();
+    alert(this.receita.nome);
   }
 }

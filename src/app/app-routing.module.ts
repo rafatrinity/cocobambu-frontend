@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     canActivate:[AuthGuardService],
-    path:"preparo:id",
+    path:"preparo",
     component: PreparoComponent
   },
   { path: '',   redirectTo: '/login', pathMatch: 'full' }
