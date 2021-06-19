@@ -14,6 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    MatToolbarModule,
     MatCardModule,
+    MatAutocompleteModule,
+    MatIconModule,
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent],
