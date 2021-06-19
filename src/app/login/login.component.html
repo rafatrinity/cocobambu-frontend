@@ -1,18 +1,30 @@
-<img src="../../assets/img-bg-login.jpg" />
-<div class="pkg row">
-  <div class="card col3">
-    <div class="card-body">
-      <form [formGroup]="formCredentials">
-        <mat-form-field appearance="fill">
-          <mat-label>Usuario</mat-label>
-          <input matInput formControlName="user" name="user">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Senha</mat-label>
-          <input matInput formControlName="pass" name="pass" type="password">
-        </mat-form-field>
-        <button mat-raised-button color="warn" (click)="validateLogin()">Warn</button>
-      </form>
-    </div>
+<div class="body">
+  <div class="card-body">
+    <img class="logo" src="../../assets/logo-coco-bambu.png" alt="" />
+
+    <form [formGroup]="formCredentials" action="/action_page.php" method="post">
+      <div class="container">
+        <input
+          formControlName="user"
+          name="user"
+          type="text"
+          placeholder="Nome do usuário"
+          required
+          id="user"
+        />
+
+        <input
+          type="password"
+          placeholder="Senha"
+          formControlName="pass"
+          name="pass"
+          required
+          id="pass"
+        />
+
+        <button (click)="validateLogin()" type="submit">Acessar</button>
+
+      </div>
+    </form>
   </div>
 </div>
