@@ -10,12 +10,10 @@ import { SharedService } from '../shared/shared.service';
 })
 export class PreparoComponent implements OnInit {
   constructor(
-    private activatedRoute: ActivatedRoute,
     private SS: SharedService
   ) {}
   receita: Receita = new Receita();
   ngOnInit(): void {
     this.receita = this.SS.getReceita();
-    alert(this.receita.nome);
   }
 }

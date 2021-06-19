@@ -1,1 +1,8 @@
-<p>preparo works!</p>
+<img src="{{receita.image.foto}}" alt="">
+<div *ngFor="let ingrediente of receita.ingredientes">
+{{ingrediente}}
+</div>
+<span>Modo de preparo</span>
+<div *ngFor="let passo of receita.preparo.passos">
+    {{passo}}
+</div>
