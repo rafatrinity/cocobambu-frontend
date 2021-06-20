@@ -47,3 +47,18 @@ mat-toolbar{
   mat-card{
     display: flex;
   }
+
+  button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 5px;
+    border: none;
+    font-size: small;
+  }
+
+  .mat-card-avatar {
+    height: 150px;
+    width: 150px;
+    border-radius: 0;
+}

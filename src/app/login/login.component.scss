@@ -40,7 +40,7 @@
 
 
 button {
-    background-color: rgb(255, 120, 0);
+  background-color: rgb(255, 120, 0);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -51,12 +51,12 @@ button {
 }
 
 button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 
 .imgcontainer {
-    text-align: center;
+  text-align: center;
   margin: 24px 0 12px 0;
 }
 
@@ -66,30 +66,32 @@ img.avatar {
 }
 
 .container {
-    padding: 16px;
+  padding: 16px;
 }
 
-    input[type=text],
-    input[type=password] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: medium;
-      font-style: italic;
-      font-family: serif;
-      text-decoration-color: #202020;
-      padding: 12px 50px 12px 50px;
-    }
-    #user{
-        background-image: url('../../assets/icon-login.png');
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
-    }
-    #pass{
-        background-image: url('../../assets/icon-key.png');
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
-    }
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: medium;
+  font-style: italic;
+  font-family: serif;
+  text-decoration-color: #202020;
+  padding: 12px 50px 12px 50px;
+}
+
+#user {
+  background-image: url('../../assets/icon-login.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
+
+#pass {
+  background-image: url('../../assets/icon-key.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
