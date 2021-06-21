@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { SharedService } from '../shared/shared.service';
 import { Receita } from './receita.model';
 import { ReceitasService } from './receitas.service';
@@ -26,6 +27,7 @@ export class ReceitasComponent implements OnInit {
     );
   }
 
+  assets = environment.assets;
   ngOnInit(): void {
     this.obterReceitas();
   }

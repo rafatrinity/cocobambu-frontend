@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+
 export class Credentials{
   user: string = '';
   pass: string = '';
@@ -23,6 +25,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  assets = environment.assets;
   ngOnInit(): void {
     this.createForm(new Credentials())
   }

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseURL: 'https://cocobambu.herokuapp.com'
+  baseURL: 'https://cocobambu.herokuapp.com',
+  assets: '/src/assets'
 };
 
 /*
