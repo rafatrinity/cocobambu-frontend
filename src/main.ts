@@ -3,10 +3,10 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+const env = environment.baseEnv;
 
 if (environment.production) {
   enableProdMode();
 }
-const env = environment.baseEnv;
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
