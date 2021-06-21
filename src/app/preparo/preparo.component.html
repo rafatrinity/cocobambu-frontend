@@ -1,4 +1,16 @@
-<img src="{{ receita.image.foto }}" alt="" />
+<div class="degrade">
+  <div class="resumo">
+    <p style="font-size: large; color: aliceblue">
+      <b> {{ receita.nome }} </b>
+    </p>
+    <p style="font-size: small; color: aliceblue">{{ receita.desc }}</p>
+  </div>
+  <img
+    style="position: relative; z-index: -1"
+    src="{{ receita.image.foto }}"
+    alt=""
+  />
+</div>
 <div class="cont">
   <mat-card>
     <mat-card-header>
