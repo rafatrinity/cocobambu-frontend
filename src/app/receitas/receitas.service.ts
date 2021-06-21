@@ -18,7 +18,6 @@ export class ReceitasService {
 
   getAll(): Observable<Receita[]> {
     this.head.append('Access-Control-Allow-Origin', '*');
-    console.log(this.head.has('Access-Control-Allow-Origin'));
     
     return this.http
       .get<Receita[]>(`${environment.baseURL}/receitas`, {
