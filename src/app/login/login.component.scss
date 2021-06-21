@@ -1,0 +1,97 @@
+.body {
+  text-align: center;
+  background-image: url("../../assets/img-bg-login.jpg");
+  height: 100vh;
+  background-position: center;
+}
+
+.card-body {
+  margin-top: 30vh;
+  width: 300px;
+  display: inline-block;
+}
+
+.background {
+  height: 100vh;
+}
+
+// input{
+//     color: aliceblue;
+// }
+
+// .title {
+//     color: white;
+// }
+// form{
+//     color: aliceblue;
+//     border-bottom-color: aliceblue;
+//     text-decoration-color: aliceblue;
+//     fill:aliceblue;
+//     flood-color: aliceblue;
+
+//     .mat-form-field-underline {
+//         background-color: aliceblue;
+//     }
+// }
+
+.logo {
+  margin-bottom: 3vh;
+}
+
+
+button {
+  background-color: rgb(255, 120, 0);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: medium;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: medium;
+  font-style: italic;
+  font-family: serif;
+  text-decoration-color: #202020;
+  padding: 12px 50px 12px 50px;
+}
+
+#user {
+  background-image: url('../../assets/icon-login.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
+
+#pass {
+  background-image: url('../../assets/icon-key.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}

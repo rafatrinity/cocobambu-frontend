@@ -1,0 +1,64 @@
+mat-toolbar{
+    background-color: rgb(46, 46, 46);
+    position: fixed;
+    top: 0%;
+    z-index: 2;
+}
+
+.receitas{
+    margin-top: 70px;
+}
+.mat-card-avatar{
+    height: 90px;
+    width: 90px;
+}
+
+.example-form {
+    margin-left: 2em;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: -15px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .example-option-img {
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
+  [dir='rtl'] .example-option-img {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  .login{
+      margin-bottom: -1em;
+  }
+  p{
+    font-size: 12px;
+    color: aliceblue;
+    margin-bottom: -2px;
+  }
+
+  mat-card{
+    display: flex;
+  }
+
+  button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 5px;
+    border: none;
+    font-size: small;
+  }
+
+  .mat-card-avatar {
+    height: 150px;
+    width: 150px;
+    border-radius: 0;
+}

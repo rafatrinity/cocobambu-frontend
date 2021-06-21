@@ -1,0 +1,54 @@
+<mat-toolbar>
+  <img src="../../assets/logo-coco-bambu-mini.png" alt="" />
+  <form class="example-form">
+    <mat-form-field style="color: aliceblue" class="example-full-width">
+      <mat-label>Prato</mat-label>
+      <input
+        matInput
+        aria-label="Prato"
+        [matAutocomplete]="auto"
+        [formControl]="receitaCtrl"
+      />
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option
+          *ngFor="let receita of filteredReceitas | async"
+          [value]="receita.nome"
+        >
+          <img
+            class="example-option-img"
+            aria-hidden
+            [src]="receita.image.thumb"
+            height="25"
+          />
+          <span>{{ receita.nome }}</span> |
+          <small>Tempo: {{ receita.preparo.tempo }}</small>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  <div (click)="logOut()" class="col" style="text-align: center; margin-left: 1.5em;">
+    <img class="row login" src="../../assets/icon-login.png" alt="">
+    <br>
+    <p>Sair</p>
+  </div>
+</mat-toolbar>
+<div class="receitas">
+  <div *ngFor="let receita of receitas">
+    <mat-card (click)="open(receita)">
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          style="background-image: url('{{ receita.image.thumb }}')"
+        ></div>
+        <mat-card-title>{{ receita.nome }}</mat-card-title>
+        <mat-card-subtitle>{{ receita.desc }}</mat-card-subtitle>
+      </mat-card-header>
+      <div style="display: flex; align-items: center;">
+        <button style="background-color: rgba(0,0,0,0); color: chartreuse;" >Prato<br>finalizado</button>
+        <button style="background-color: rgba(0,0,0,0.1); color: black;">Hoje<br>18:00</button>
+        <button style="background-color: rgb(255, 120, 0); color: aliceblue;">Ver<br>receita</button>
+      </div>
+    </mat-card>
+  </div>
+</div>
