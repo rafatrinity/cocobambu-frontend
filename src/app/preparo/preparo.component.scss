@@ -89,7 +89,7 @@
     position: fixed;
     padding: 2em;
     max-width: 800px;
-    top: 450px;
+    bottom: 60vh;
   }
 
   .tempo{
@@ -126,4 +126,12 @@
 
   span b{
     font-size: medium;
+  }
+
+  .footer{
+    background-color:darkgray;
+    display: flex;
+    padding: 1em;
+    width: 100vw;
+    max-width: 800px;
   }
