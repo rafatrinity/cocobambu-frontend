@@ -1,4 +1,15 @@
 <div class="degrade">
+  <div class="tempo">
+    <img
+      style="width: 3em; height: 3em"
+      src="{{ assets }}/icon-time.png"
+      alt=""
+    />
+    <p style="margin-left: 1em">
+      Tempo de preparo <br />
+      <b>{{ receita.preparo.tempo }}</b>
+    </p>
+  </div>
   <div class="resumo">
     <p style="font-size: large; color: aliceblue">
       <b> {{ receita.nome }} </b>
@@ -12,33 +23,22 @@
   />
 </div>
 <div class="cont">
-  <mat-card>
-    <mat-card-header>
-      <span><b>Ingredientes</b></span>
-    </mat-card-header>
-    <mat-card-content>
-      <div *ngFor="let ingrediente of receita.ingredientes">
-        <label class="container"
-          >{{ ingrediente }}
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
-      </div>
-    </mat-card-content>
-  </mat-card>
-  <mat-card>
-    <mat-card-header>
-      <span><b>Modo de preparo</b></span>
-    </mat-card-header>
-    <mat-card-content>
-      <div *ngFor="let passo of receita.preparo.passos; index as i">
-        <label class="container"
-          ><b>Passo: {{ i + 1 }}</b> <br />
-          {{ passo }}
-          <input type="checkbox" />
-          <span class="checkmark"></span>
-        </label>
-      </div>
-    </mat-card-content>
-  </mat-card>
+  <span><b>Ingredientes</b></span>
+  <div *ngFor="let ingrediente of receita.ingredientes">
+    <label class="container"
+      >{{ ingrediente }}
+      <input type="checkbox" />
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  <hr />
+  <span><b>Modo de preparo</b></span>
+  <div *ngFor="let passo of receita.preparo.passos; index as i">
+    <label class="container"
+      ><b>Passo: {{ i + 1 }}</b> <br />
+      {{ passo }}
+      <input type="checkbox" />
+      <span class="checkmark"></span>
+    </label>
+  </div>
 </div>
