@@ -10,10 +10,10 @@
         [formControl]="receitaCtrl"
       />
       <mat-icon matSuffix>search</mat-icon>
-      <mat-autocomplete #auto="matAutocomplete">
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="open($event.option.value)">
         <mat-option
           *ngFor="let receita of filteredReceitas | async"
-          [value]="receita.nome"
+          [value]="receita"
         >
           <img
             class="example-option-img"

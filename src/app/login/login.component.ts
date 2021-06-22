@@ -35,7 +35,8 @@ export class LoginComponent implements OnInit {
     if(this.formCredentials.value.user == 'testeusername' && this.formCredentials.value.pass == 'testesenha'){
       localStorage.setItem('isAuthenticated', 'true');
       this.router.navigate(['receitas']);
-    }    
+    }   
+    else alert('Usuario ou senha atá incorreto. \n tente \n usuario: testeusername \n senha: testesenha');
   }
 
 }
