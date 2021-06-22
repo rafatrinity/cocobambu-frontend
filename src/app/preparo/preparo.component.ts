@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Receita } from '../receitas/receita.model';
 import { SharedService } from '../shared/shared.service';
+import { FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-preparo',
@@ -18,4 +18,5 @@ export class PreparoComponent implements OnInit {
   ngOnInit(): void {
     this.receita = this.SS.getReceita();
   }
+
 }

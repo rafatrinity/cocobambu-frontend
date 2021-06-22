@@ -38,13 +38,13 @@
 </div>
 <div class="cont">
   <span><b>Ingredientes</b></span>
-  <div style="margin-top: 1em" *ngFor="let ingrediente of receita.ingredientes">
+  <form style="margin-top: 1em" *ngFor="let ingrediente of receita.ingredientes">
     <label class="container"
       >{{ ingrediente }}
       <input type="checkbox" />
       <span class="checkmark"></span>
     </label>
-  </div>
+  </form>
   <hr />
   <span><b>Modo de preparo</b></span>
   <div
