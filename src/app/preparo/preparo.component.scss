@@ -103,6 +103,27 @@
     padding: 1em;
   }
 
+  .voltar{
+    position: fixed;
+    display: flex;
+    left: 2em;
+    top: 2em;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .voltar p{
+    margin-left: 1em;
+    font-size: medium;
+    color:#eee;
+    margin-top: 11px;
+  }
+
+
   .cont{
     padding: 1em;
+  }
+
+  span b{
+    font-size: medium;
   }
