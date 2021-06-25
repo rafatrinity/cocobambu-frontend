@@ -1,65 +1,66 @@
-<div class="degrade">
-  <div routerLink="/receitas" class="voltar">
-    <img
-      style="width: 3em; height: 3em"
-      src="{{ assets }}/icon-back.png"
-      alt=""
-    />
-    <p>Voltar</p>
-  </div>
-  <div class="tempo">
-    <img
-      style="width: 3em; height: 3em"
-      src="{{ assets }}/icon-time.png"
-      alt=""
-    />
-    <p style="margin-left: 1em">
-      Tempo de preparo <br />
-      <b>{{ receita.preparo.tempo }}</b>
+<div d-flex>
+  <div class="degrade" style="display: grid">
+    <!-- 
+ -->
+    <!-- <div class="resumo">
+    <!-- </div> -->
+    <img src="{{ receita.image.foto }}" alt="" />
+    <p id="desc">
+      <br />
+      <b style="font-size: large"> {{ receita.nome }} </b>
+      <br /><br />
+      {{ receita.desc }}
     </p>
+    <div class="header">
+      <div routerLink="/receitas" class="voltar">
+        <img
+          style="width: 3em; height: 3em"
+          src="{{ assets }}/icon-back.png"
+          alt=""
+        />
+        <p>Voltar</p>
+      </div>
+      <div class="tempo">
+        <img
+          style="width: 3em; height: 3em"
+          src="{{ assets }}/icon-time.png"
+          alt=""
+        />
+        <p style="margin-left: 1em">
+          Tempo de preparo <br />
+          <b>{{ receita.preparo.tempo }}</b>
+        </p>
+      </div>
+    </div>
   </div>
-  <div class="resumo">
-    <p style="font-size: large; color: white">
-      <b> {{ receita.nome }} </b>
-    </p>
-    <p style="font-size: small; color: white">{{ receita.desc }}</p>
+  <div class="cont">
+    <span><b>Ingredientes</b></span>
+    <form
+      style="margin-top: 1em"
+      *ngFor="let ingrediente of receita.ingredientes"
+    >
+      <label class="container"
+        >{{ ingrediente }}
+        <input type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+    </form>
+    <hr />
+    <span><b>Modo de preparo</b></span>
+    <div
+      style="margin-top: 1em"
+      *ngFor="let passo of receita.preparo.passos; index as i"
+    >
+      <label class="container"
+        ><b>Passo: {{ i + 1 }}</b> <br />
+        {{ passo }}
+        <input type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
   </div>
-  <img
-    style="
-      position: relative;
-      z-index: -1;
-      width: 100vw;
-      height: auto;
-      max-width: 800px;
-    "
-    src="{{ receita.image.foto }}"
-    alt=""
-  />
-</div>
-<div class="cont">
-  <span><b>Ingredientes</b></span>
-  <form style="margin-top: 1em" *ngFor="let ingrediente of receita.ingredientes">
-    <label class="container"
-      >{{ ingrediente }}
-      <input type="checkbox" />
-      <span class="checkmark"></span>
-    </label>
-  </form>
-  <hr />
-  <span><b>Modo de preparo</b></span>
-  <div
-    style="margin-top: 1em"
-    *ngFor="let passo of receita.preparo.passos; index as i"
-  >
-    <label class="container"
-      ><b>Passo: {{ i + 1 }}</b> <br />
-      {{ passo }}
-      <input type="checkbox" />
-      <span class="checkmark"></span>
-    </label>
+  <div class="footer">
+    <mat-progress-bar mode="determinate" [value]="10"> </mat-progress-bar>
+    <button></button>
   </div>
-</div>
-<div class="footer">
-  <mat-progress-bar mode="determinate" [value]="10"> </mat-progress-bar>
-  <button></button>
 </div>
